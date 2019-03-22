@@ -12,7 +12,7 @@
         },
         "serverVersion": {
             "type": "string",
-            "defaultValue": "6.0.0"
+            "defaultValue": "6.0.1"
         },
         "syncGatewayNodeCount": {
             "type": "int",
@@ -40,7 +40,7 @@
         },
         "license": {
             "type": "string",
-            "defaultValue": "byol"
+            "defaultValue": "byol_2019"
         },
         "baseUrl": {
             "type": "string",
@@ -64,34 +64,20 @@
             "location": "[parameters('location')]",
             "properties": {
                 "securityRules": [
-                    {
-                        "name": "block-internet",
-                        "properties": {
-                            "description": "Block Internet",
-                            "protocol": "*",
-                            "sourcePortRange": "*",
-                            "destinationPortRange": "*",
-                            "sourceAddressPrefix": "*",
-                            "destinationAddressPrefix": "Internet",
-                            "access": "Deny",
-                            "priority": 200,
-                            "direction": "Outbound"
-                        }
-                    },
-                    {
-                        "name": "SSH",
-                        "properties": {
-                            "description": "SSH",
-                            "protocol": "Tcp",
-                            "sourcePortRange": "*",
-                            "destinationPortRange": "22",
-                            "sourceAddressPrefix": "Internet",
-                            "destinationAddressPrefix": "*",
-                            "access": "Allow",
-                            "priority": 100,
-                            "direction": "Inbound"
-                        }
-                    },
+                    {	
+                        "name": "SSH",	
+                        "properties": {	
+                          "description": "SSH",	
+                          "protocol": "Tcp",	
+                          "sourcePortRange": "*",	
+                          "destinationPortRange": "22",	
+                          "sourceAddressPrefix": "Internet",	
+                          "destinationAddressPrefix": "*",	
+                          "access": "Allow",	
+                          "priority": 100,	
+                          "direction": "Inbound"	
+                        }	
+                      },
                     {
                         "name": "ErlangPortMapper",
                         "properties": {

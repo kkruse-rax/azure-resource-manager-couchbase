@@ -85,7 +85,7 @@
             "imageReference": {
               "publisher": "Canonical",
               "offer": "UbuntuServer",
-              "sku": "14.04.5-LTS",
+              "sku": "16.04-LTS",
               "version": "latest"
             }
           },
@@ -93,7 +93,7 @@
             "name": "serverNodeCount",
             "type": "Microsoft.Common.DropDown",
             "label": "Server Node Count",
-            "defaultValue": "5",
+            "defaultValue": "3",
             "toolTip": "Number of virtual machines to provision for Server",
             "constraints": {
               "allowedValues": [
@@ -267,17 +267,21 @@
             "name": "serverVersion",
             "type": "Microsoft.Common.DropDown",
             "label": "Server Version",
-            "defaultValue": "6.0.0",
+            "defaultValue": "6.0.1",
             "toolTip": "Server Version",
             "constraints": {
               "allowedValues": [
+                {
+                  "label": "6.0.1",
+                  "value": "6.0.1"
+                },
                 {
                   "label": "6.0.0",
                   "value": "6.0.0"
                 },
                 {
-                  "label": "5.5.0",
-                  "value": "5.5.0"
+                  "label": "5.5.3",
+                  "value": "5.5.3"
                 },
                 {
                   "label": "5.1.1",

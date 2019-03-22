@@ -16,9 +16,9 @@ echo uniqueString \'$uniqueString\'
 echo location \'$location\'
 
 echo "Installing prerequisites..."
-apt-get update
-apt-get -y install python-httplib2
-apt-get -y install jq
+sudo apt-get update
+sudo apt-get -y install python-httplib2
+sudo apt-get -y install jq
 
 echo "Installing Couchbase Server..."
 wget http://packages.couchbase.com/releases/${version}/couchbase-server-enterprise_${version}-ubuntu16.04_amd64.deb
